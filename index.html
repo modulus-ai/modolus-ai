@@ -1,279 +1,169 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport"    content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Retro - Free Consulting Responsive Website Template">
-<meta name="author" content="webThemez.com">
-<title>Retro - Free Consulting Responsive Website Template</title>
-<link rel="favicon" href="assets/images/favicon.png">
-<link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-<!-- Custom styles for our template -->
-<link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen" >
-<link rel="stylesheet" type="text/css" href="assets/css/da-slider.css" />
-<link rel="stylesheet" href="assets/css/style.css">
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-	<script src="assets/js/html5shiv.js"></script>
-	<script src="assets/js/respond.min.js"></script>
-	<![endif]-->
+    <title>Modulus-AI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Maitree:wght@200;300;400;500;600;700&display=swap');
+
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Maitree', sans-serif;
+            color: white;
+        }
+
+        #header {
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+        }
+
+        #main {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 2em;
+            /* Medium big letters */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #main p {
+            font-size: 0.5em;
+            /* Smaller letters */
+        }
+
+        #main .section {
+            margin: 20px;
+            flex: 1 1 200px;
+        }
+
+        #footer {
+            position: absolute;
+            z-index: 2;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.75em;
+            /* Small letters */
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+        }
+
+        /* Responsive design for smaller devices */
+        @media (max-width: 600px) {
+            #main {
+                flex-direction: column;
+            }
+
+            #main .section {
+                flex: 1 1 auto;
+            }
+        }
+
+        /* Centering the company name and aligning the paragraph underneath */
+        #company-info {
+            text-align: center;
+            width: 100vw;
+            padding-bottom: 10vw;
+        }
+
+        .mai-services {
+            font-weight: 900;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        header {
+            /* background: #333;
+            color: #fff; */
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            float: left;
+            margin-left: 20px;
+        }
+
+        nav {
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f0f0f0;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
+
 <body>
-<!-- Fixed navbar -->
-<div class="navbar navbar-inverse navbar-fixed-top headroom" >
-  <div class="container">
-    <div class="navbar-header"> 
-      <!-- Button for smallest screens -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand" href="index.html"><img src="assets/images/logo_modulos-ai.jpeg" alt="Retro HTML5 template"></a> </div>
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav pull-right">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="sidebar-right.html">Right Sidebar</a></li>
-            <li><a href="#">Dummy Link1</a></li>
-            <li><a href="#">Dummy Link2</a></li>
-            <li><a href="#">Dummy Link3</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <header id="header">
+        <div class="container">
+            <h1>Modulus-AI.mk</h1>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <div id="main">
+        <div id="company-info">
+            <h2>Modulus-AI</h2>
+            <p class="mai-services">Modulus-AI provides services in automation, planning, designing, and artificial
+                intelligence.</p>
+        </div>
+        <div class="section">
+            <h3>Automation</h3>
+            <p>At Modulus-AI, we believe in the power of automation to streamline processes, increase efficiency, and
+                reduce human error. Our automation solutions are designed to help businesses thrive in the digital age.
+            </p>
+        </div>
+        <div class="section">
+            <h3>Planning</h3>
+            <p>Our planning services are designed to help businesses strategize and plan for the future. We use
+                data-driven insights to help businesses make informed decisions and achieve their goals.</p>
+        </div>
+        <div class="section">
+            <h3>Designing</h3>
+            <p>We offer designing services that are focused on creating user-friendly and aesthetically pleasing
+                designs. Our design solutions are tailored to meet the unique needs of each business.</p>
+        </div>
+        <div class="section">
+            <h3>Artificial Intelligence</h3>
+            <p>Our artificial intelligence services are designed to help businesses leverage the power of AI to drive
+                innovation and improve efficiency. We offer AI solutions that are tailored to the specific needs of each
+                business.</p>
+        </div>
     </div>
-    <!--/.nav-collapse --> 
-  </div>
-</div>
-<!-- /.navbar --> 
-
-<!-- Header -->
-<header id="head">
-  <div class="container">
-    <div class="banner-content">
-      <div id="da-slider" class="da-slider">
-        <div class="da-slide">
-          <h2>AUTOMATION</h2>
-          <p>Just a placeholder for now</p>
-          <div class="da-img"></div>
-        </div>
-        <div class="da-slide">
-          <h2>PLANNING</h2>
-          <p>Just a placeholder for now</p>
-          <div class="da-img"></div>
-        </div>
-        <div class="da-slide">
-          <h2>DESIGNING</h2>
-          <p>Just a placeholder for now</p>
-          <div class="da-img"></div>
-        </div>
-        <div class="da-slide">
-          <h2>ARTIFICIAL INTELLEGENCE</h2>
-          <p>Just a placeholder for now</p>
-          <div class="da-img"></div>
-        </div>
-        <nav class="da-arrows"> <span class="da-arrows-prev"></span> <span class="da-arrows-next"></span> </nav>
-      </div>
+    <div id="footer">
+        Modulus-AI | Contact: georgievski@modulus-ai
     </div>
-  </div>
-</header>
-<!-- /Header --> 
-
-<!-- Intro -->
-<div class="container text-center sectionBox herotxt">
-  <h2 >Welcome!</h2>
-  <p class="text-muted"> Welcome to Modulus-AI, your trusted partner in the realm of automation and artificial intelligence. As a leading AI company, we are committed to providing innovative and efficient solutions that empower businesses to streamline their operations, enhance productivity, and drive growth.
-    Our mission is to harness the transformative power of AI and use it to create tailored solutions that meet your unique business needs. With a team of experts, cutting-edge technology, and deep industry knowledge, we deliver solutions that are not only effective but also sustainable.
-    At Modulus-AI, we believe in making the impossible, possible. Join us on this journey towards a smarter, more automated future. Welcome aboard!
-    Feel free to explore our website to learn more about our services and solutions. If you have any questions or need further information, don't hesitate to reach out to us. We're here to help!. </p>
-</div>
-<!-- /Intro--> 
-
-<!-- Highlights - jumbotron -->
-<div class="jumbotron sectionBox">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-3 col-sm-6 highlight">
-        <div class="h-caption">
-          <h4><i class="fa fa-users fa-2x circle"></i>AUTOMATION</h4>
-        </div>
-        <div class="h-body text-center">
-          <p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies sed elit imperdiet congue. Integer ultricies sed ligula eget tempus.</p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 highlight">
-        <div class="h-caption">
-          <h4><i class="fa fa-bar-chart-o fa-2x circle"></i>PLANNING</h4>
-        </div>
-        <div class="h-body text-center">
-          <p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies sed elit imperdiet congue. Integer ultricies sed ligula eget tempus.</p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 highlight">
-        <div class="h-caption">
-          <h4><i class="fa fa-gears fa-2x circle"></i>DESIGNING</h4>
-        </div>
-        <div class="h-body text-center">
-          <p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies sed elit imperdiet congue. Integer ultricies sed ligula eget tempus.</p>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-6 highlight">
-        <div class="h-caption">
-          <h4><i class="fa fa-file-word-o fa-2x circle"></i>ARTIFICIAL INTELLEGENCE</h4>
-        </div>
-        <div class="h-body text-center">
-          <p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies sed elit imperdiet congue. Integer ultricies sed ligula eget tempus.</p>
-        </div>
-      </div>
-    </div>
-    <!-- /row  --> 
-    
-  </div>
-</div>
-<!-- /Highlights -->
-<section class="sectionBox">
-  <div class="container">
-    <div class="row">
-      <div class='col-md-offset-2 col-md-8 text-center'>
-        <h2>Testimonial</h2>
-      </div>
-    </div>
-    <div class='row'>
-      <div class='col-md-offset-2 col-md-8'>
-        <div class="carousel slide" data-ride="carousel" id="quote-carousel"> 
-          <!-- Bottom Carousel Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#quote-carousel" data-slide-to="1"></li>
-            <li data-target="#quote-carousel" data-slide-to="2"></li>
-          </ol>
-          
-          <!-- Carousel Slides / Quotes -->
-          <div class="carousel-inner"> 
-            
-            <!-- Quote 1 -->
-            <div class="item active">
-              <blockquote>
-                <div class="row">
-                  <div class="col-sm-3 text-center"> <img class="img-circle" src="assets/images/person_1.png" style="width: 100px;height:100px;"> </div>
-                  <div class="col-sm-9">
-                    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
-                    <small>Someone famous</small> </div>
-                </div>
-              </blockquote>
-            </div>
-            <!-- Quote 2 -->
-            <div class="item">
-              <blockquote>
-                <div class="row">
-                  <div class="col-sm-3 text-center"> <img class="img-circle" src="assets/images/person_2.png" style="width: 100px;height:100px;"> </div>
-                  <div class="col-sm-9">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.</p>
-                    <small>Someone famous</small> </div>
-                </div>
-              </blockquote>
-            </div>
-            <!-- Quote 3 -->
-            <div class="item">
-              <blockquote>
-                <div class="row">
-                  <div class="col-sm-3 text-center"> <img class="img-circle" src="assets/images/person_3.png" style="width: 100px;height:100px;"> </div>
-                  <div class="col-sm-9">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
-                    <small>Someone famous</small> </div>
-                </div>
-              </blockquote>
-            </div>
-          </div>
-          
-          <!-- Carousel Buttons Next/Prev --> 
-          <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a> <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a> </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="sectionBox">
-<div class="container">
-  <div class="heading"> 
-    <!-- Heading -->
-    <h2>About the Company</h2>
-    <br/>
-  </div>
-  <div class="row">
-    <div class="col-md-4"> <img src="assets/images/spotlight.jpeg" alt="" class="img-responsive"> </div>
-    <div class="col-md-8">
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
-      <blockquote class="blockquote-1">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid</p>
-        <small>Someone famous in <cite title="Source Title">Source Title</cite></small> </blockquote>
-    </div>
-  </div>
-</div>
-</section>
-<!-- container -->
-
-<footer id="footer" class="top-space">
-  <div class="footer1">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5 panel">
-          <h3 class="panel-title">Lates News</h3>
-          <div class="panel-body">
-            <p>Lorem ipsum dolor amet, consectetur adipiscing elit. Aenean leo lectus sollicitudin convallis eget libero. Aliquam laoreet tellus ut libero semper, egestas velit malesuada. Sed non risus eget dolor amet vestibulum ullamcorper. Integer feugiat molestie.</p>
-          </div>
-        </div>
-        <div class="col-md-4 panel contact">
-          <h3 class="panel-title">
-          Contact Info
-          </h4>
-          <div class="panel-body">
-            <p>Lorem ipsum dolor amet, consectetur adipiscing ipsum dolor.</p>
-            <ul>
-              <li><i class="fa fa-phone"></i>1-123-345-6789</li>
-              <li><a href="#"><i class="fa fa-envelope-o"></i> contact@webthemez.com</a></li>
-              <li><i class="fa fa-flag"></i>123 Smith Drive, Baltimore, MD 21212</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3 panel">
-          <h3 class="panel-title">Follow Us</h3>
-          <div class="panel-body">
-            <p class="follow-me-icons"> <a href=""><i class="fa fa-twitter fa-2"></i></a> <a href=""><i class="fa fa-dribbble fa-2"></i></a> <a href=""><i class="fa fa-github fa-2"></i></a> <a href=""><i class="fa fa-facebook fa-2"></i></a> <a href=""><i class="fa fa-youtube fa-2"></i></a> <a href=""><i class="fa fa-pinterest fa-2"></i></a> </p>
-          </div>
-        </div>
-      </div>
-      <!-- /row of panels --> 
-    </div>
-  </div>
-  <div class="footer2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 panel">
-          <div class="panel-body">
-            <p class="simplenav"> <a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="services.html">Services</a> | <a href="portfolio.html">Portfolio</a> | <a href="contact.html">Contact</a> </p>
-          </div>
-        </div>
-        <div class="col-md-6 panel">
-          <div class="panel-body">
-            <p class="text-right"> Copyright &copy; 2014. Template by <a href="http://webthemez.com/" rel="develop">WebThemez.com</a> </p>
-          </div>
-        </div>
-      </div>
-      <!-- /row of panels --> 
-    </div>
-  </div>
-</footer>
-
-<!-- JavaScript libs are placed at the end of the document so the pages load faster --> 
-<script src="assets/js/modernizr-latest.js"></script> 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> 
-<script src="assets/js/jquery.cslider.js"></script> 
-<script src="assets/js/headroom.min.js"></script> 
-<script src="assets/js/jQuery.headroom.min.js"></script> 
-<script src="assets/js/custom.js"></script>
+    <script src="sketch.js"></script>
 </body>
+
 </html>
