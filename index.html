@@ -61,13 +61,36 @@
         }
 
         /* Responsive design for smaller devices */
-        @media (max-width: 600px) {
-            #main {
+        @media (max-width: 768px) {
+            header {
                 flex-direction: column;
             }
 
-            #main .section {
-                flex: 1 1 auto;
+            header ul {
+                padding: 0;
+            }
+
+            header ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            #home,
+            #about {
+                padding: 10px;
+            }
+
+            #home h1 {
+                font-size: 2em;
+            }
+
+            #home p,
+            #about p {
+                font-size: 1em;
+            }
+
+            footer {
+                position: relative;
             }
         }
 
